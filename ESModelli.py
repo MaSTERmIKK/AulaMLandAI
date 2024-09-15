@@ -1,4 +1,6 @@
-# 1. Support Vector Machine (Classificatore)
+# AVVERTIMENTO!!1 IL CODICE VA REVISIONATO PER FUNZIONARE CORRETTAMENTE
+
+#1. Support Vector Machine (Classificatore)
 from sklearn.svm import SVC
 
 # Definire il modello SVM con kernel lineare
