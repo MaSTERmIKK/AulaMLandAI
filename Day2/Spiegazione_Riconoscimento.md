@@ -1,3 +1,5 @@
+Ragazzi vi ho fatto fare questo veloce report descrittivo tramite i miei commenti e l'AI spero vi sia utile 
+
 Questo codice include:
 
 Importazione delle librerie necessarie: numpy, matplotlib, seaborn, tensorflow.keras, sklearn.metrics.
