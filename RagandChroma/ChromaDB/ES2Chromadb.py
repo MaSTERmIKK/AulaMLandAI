@@ -28,3 +28,36 @@ collezione.add(
     ],
     ids=["img1", "img2", "img3"]
 )
+
+# Generiamo un embedding di query (ad esempio, di una nuova immagine)
+query_embedding = np.random.rand(128).tolist()
+
+# Eseguiamo la query per trovare gli embeddings più simili
+risultati = collezione.query(
+    query_embeddings=[query_embedding],
+    n_results=2
+)
+
+print("Risultati della query senza filtro:")
+print(risultati)
+
+# Eseguiamo una query con filtro sui metadati
+risultati_filtrati = collezione.query(
+    query_embeddings=[query_embedding],
+    n_results=2,
+    where={"categoria": "natura"}
+)
+
+print("\nRisultati della query con filtro sulla categoria 'natura':")
+print(risultati_filtrati)
+
+# Aggiorniamo i metadati di 'img1'
+collezione.update(
+    ids=["img1"],
+    metadatas=[{"nome": "immagine1_modificata.jpg", "categoria": "paesaggio"}]
+)
+
+# Rimuoviamo 'img2' dalla collezione
+collezione.delete(
+    ids=["img2"]
+)
